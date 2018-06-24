@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Clientes Registrados-Home Installation</title>
+  <link rel="icon" type="image/png" href="../../img/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/cuentas.css">
+  <link rel="stylesheet" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+</head>
+<style type="text/css">
+  .error {
+    color: #F81111 !important;
+  }
+  
+  input:validate {
+    color: green;
+  }
+</style>
+
+<body>
+  <!-- crear usuario -->
+  <section class="">
+    <!-- Tabla -->
+    <div class="col-12 col-lg-12 mx-auto mt-5">
+      <h1 class="text-center mb-5">Clientes Registrados</h1>
+      <table id="myTable" class=" table table-hover bg-white z-depth-1 rounded">
+        <thead>
+          <tr class="text-center">
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Cédula</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+            <th>Fecha</th>
+            <th>Producto a instalar</th>
+            <th>Asignar Técnico</th>
+            <th>Acciones </th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr>
+            <td id="nameUser" class="font-weight-normal text-right"></td>
+            <td id="lastNameUser" class="font-weight-normal text-right"></td>
+            <td id="identify" class="font-weight-normal text-right"></td>
+            <td id="direccion" class="font-weight-normal text-right"></td>
+            <td id="telefono" class="font-weight-normal text-right"></td>
+            <td id="emailUser" class="font-weight-normal text-right"></td>
+            <td id="fecha" class="font-weight-normal text-right">
+              <input type="date" name="date" class="form-control">
+
+            </td>
+            <td id="producto" class="font-weight-normal text-right">
+              <div class="p-0 m-0">
+                <select class="custom-select" id="inputGroupSelect01">
+					<option selected>Productos </option>
+					<option value="#">Closet</option>
+					<option value="#">Bases TV</option>
+					<option value="#">Duchas</option>
+					<option value="#">Mesas de trabajo</option>
+				</select>
+              </div>
+            </td>
+            <td id="tecnico" class="font-weight-normal text-right">
+              <div class="p-0 m-0">
+                <select class="custom-select" id="inputGroupSelect01">
+					<option value="Tecnico">Técnicos disponibles</option>
+					<option value="#">Pepe Pérez</option>
+					<option value="#">Juan Rodriguez</option>
+					<option value="#">Enrique Reparatodo</option>
+					<option value="#">Miguel Armando</option>
+				  </select>
+                </select>
+              </div>
+            </td>
+            <td id="botones" class="text-right">
+              <button class="editar btn btn-info btn-sm" onclick="editarFila(this)">Crear Cita</button>
+              <!-- <button class="insertar btn btn-primary" onclick="insertarFila(this)"><i class="fa fa-plus"></i></button> -->
+              <!-- <button class="copiar btn btn-warning" onclick="copiarFila(this)"><i class="fa fa-clone"></i></button> -->
+              <button class="eliminar btn btn-danger btn-sm" onclick="borrarFila(this)"><i class="fa fa-trash-o"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td>Gonzalo</td>
+            <td>Gonzalez</td>
+            <td>109876098</td>
+            <td>cra 78 998</td>
+            <td>76543456</td>
+            <td>gogo@gmal.co</td>
+            <td>
+              <input type="date" name="date" class="form-control">
+            </td>
+            <td>
+              <div class="p-0 m-0">
+                <select class="custom-select" id="inputGroupSelect01">
+						<option selected>Productos </option>
+						<option value="#">Closet</option>
+						<option value="#">Bases TV</option>
+						<option value="#">Duchas</option>
+						<option value="#">Mesas de trabajo</option>
+					</select>
+              </div>
+            </td>
+            <td id="tecnico" class="font-weight-normal text-right">
+              <div class="p-0 m-0">
+                <select class="custom-select" id="inputGroupSelect01">
+						<option value="Tecnico">Técnicos disponibles</option>
+						<option value="#">Pepe Pérez</option>
+						<option value="#">Juan Rodriguez</option>
+						<option value="#">Enrique Reparatodo</option>
+						<option value="#">Miguel Armando</option>
+					  </select>
+                </select>
+              </div>
+            </td>
+            <td id="botones" class="text-right">
+              <button class="editar btn btn-info btn-sm" onclick="editarFila(this)">Crear Cita</button>
+              <!-- <button class="insertar btn btn-primary" onclick="insertarFila(this)"><i class="fa fa-plus"></i></button> -->
+              <!-- <button class="copiar btn btn-warning" onclick="copiarFila(this)"><i class="fa fa-clone"></i></button> -->
+              <button class="eliminar btn btn-danger btn-sm" onclick="borrarFila(this)"><i class="fa fa-trash-o"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </section>
+  <!-- crear usuario -->
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+  <!-- <script src="../../js/main.js"></script> -->
+  <script src="../../js/jquery.validate.js"></script>
+  <script src="../../js/sweetalert.min.js"></script>
+  <script src="../../js/createClient.js"></script>
+  <script src="../../js/jquery.validate.js"></script>
+  <script>
+    function validarContact() {
+      $("#createUser").validate({
+        rules: {
+          contrasena: "required",
+          confirmPsw: {
+            equalTo: "#contrasena"
+          }
+        }
+      });
+    }
+    $(document).ready(function() {
+      validarContact();
+    });
+  </script>
+</body>
+
+
+</html>

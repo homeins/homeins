@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Agendas Técnicos-Home Installation</title>
+  <link rel="icon" type="image/png" href="../../img/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/admin.css">
+  <link rel="stylesheet" href="../../css/font-awesome.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- lista de clientes -->
+  <div class="text-center py-5">
+    <h1>Agendas Técnicos</h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-12 p-0">
+        <div class="">
+          <button class="btn btn-dark" onclick="mostrarCliente(event, 'cliente1')" id="defaultOpen">Andrés Barreto</button>
+          <button class="btn btn-dark mt-3" onclick="mostrarCliente(event, 'cliente2')">Steven Vargas</button>
+          <button class="btn btn-dark mt-3" onclick="mostrarCliente(event, 'cliente3')">Yesid Martinez</button>
+        </div>
+      </div>
+      <div class="col-lg-10 col-md-9 col-sm-12">
+
+        <div id="cliente1" class="container">
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar citas" title="">
+          <table id="myTable" class="table table-bordered table-hover">
+            <tr class="table-header">
+              <th>Orden de trabajo</th>
+              <th>Nombre Cliente</th>
+              <th>Instalacion</th>
+              <th>Fecha</th>
+              <th>Hora</th>
+              <th>Acciones</th>
+            </tr>
+            <tr>
+              <td>34532</td>
+              <td>Camila Cabello</td>
+              <td>Armario</td>
+              <td>30/05/2018</td>
+              <td>8:00 am</td>
+              <td>
+                <div class="text-center">
+                  <div class="acciones editar btn btn-sm btn-info" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                    <i class="fa fa-pencil-square-o " aria-hidden="true" title=""></i>
+                  </div>
+                  <div class="acciones eliminar btn btn-danger btn-sm">
+                    <span class="accionestext">Eliminar</span>
+                    <i class="fa fa-trash" aria-hidden="true" title=""></i>
+                  </div>
+                  <div class="acciones guardar">
+                    <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+                    <span class="accionestext">Guardar</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>987688</td>
+              <td>Major Lazer</td>
+              <td>Armario</td>
+              <td>30/05/2018</td>
+              <td>8:00 am</td>
+              <td>
+                <div class="text-center">
+                  <div class="btn btn-sm btn-info">
+                    <i class="fa fa-pencil-square-o " aria-hidden="true" title="Editar"></i>
+                  </div>
+                  <div class="acciones eliminar">
+                    <span class="accionestext">Eliminar</span>
+                    <i class="fa fa-trash" aria-hidden="true" title=""></i>
+                  </div>
+                  <div class="acciones guardar">
+                    <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+                    <span class="accionestext">Guardar</span>
+                  </div>
+                </div>
+
+              </td>
+            </tr>
+            <tr>
+              <td>34532</td>
+              <td>Camila Cabello</td>
+              <td>Armario</td>
+              <td>30/05/2018</td>
+              <td>8:00 am</td>
+              <td>
+                <div class="text-center">
+                  <div class="btn btn-sm btn-info">
+                    <i class="fa fa-pencil-square-o " aria-hidden="true" title="Editar"></i>
+                  </div>
+                  <div class="acciones eliminar">
+                    <span class="accionestext">Eliminar</span>
+                    <i class="fa fa-trash" aria-hidden="true" title=""></i>
+                  </div>
+                  <div class="acciones guardar">
+                    <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+                    <span class="accionestext">Guardar</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>987688</td>
+              <td>Major Lazer</td>
+              <td>Armario</td>
+              <td>30/05/2018</td>
+              <td>8:00 am</td>
+              <td>
+                <div class="text-center">
+                  <div class="btn btn-sm btn-info">
+                    <i class="fa fa-pencil-square-o " aria-hidden="true" title="Editar"></i>
+                  </div>
+                  <div class="acciones eliminar">
+                    <span class="accionestext">Eliminar</span>
+                    <i class="fa fa-trash" aria-hidden="true" title=""></i>
+                  </div>
+                  <div class="acciones guardar">
+                    <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+                    <span class="accionestext">Guardar</span>
+                  </div>
+                </div>
+
+              </td>
+            </tr>
+            <tr>
+              <td>34532</td>
+              <td>Camila Cabello</td>
+              <td>Armario</td>
+              <td>30/05/2018</td>
+              <td>8:00 am</td>
+              <td>
+                <div class="text-center">
+                  <div class="btn btn-sm btn-info">
+                    <i class="fa fa-pencil-square-o " aria-hidden="true" title="Editar"></i>
+                  </div>
+                  <div class="acciones eliminar">
+                    <span class="accionestext">Eliminar</span>
+                    <i class="fa fa-trash" aria-hidden="true" title=""></i>
+                  </div>
+                  <div class="acciones guardar">
+                    <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+                    <span class="accionestext">Guardar</span>
+                  </div>
+                </div>
+
+              </td>
+            </tr>
+            <tr>
+              <td>987688</td>
+              <td>Major Lazer</td>
+              <td>Armario</td>
+              <td>30/05/2018</td>
+              <td>8:00 am</td>
+              <td>
+                <div class="text-center">
+                  <div class="btn btn-sm btn-info">
+                    <i class="fa fa-pencil-square-o " aria-hidden="true" title="Editar"></i>
+                  </div>
+                  <div class="acciones eliminar">
+                    <span class="accionestext">Eliminar</span>
+                    <i class="fa fa-trash" aria-hidden="true" title=""></i>
+                  </div>
+                  <div class="acciones guardar">
+                    <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+                    <span class="accionestext">Guardar</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>34532</td>
+              <td>Camila Cabello</td>
+              <td>Armario</td>
+              <td>30/05/2018</td>
+              <td>8:00 am</td>
+              <td>
+                <div class="text-center">
+                  <div class="btn btn-sm btn-info">
+                    <i class="fa fa-pencil-square-o " aria-hidden="true" title="Editar"></i>
+                  </div>
+                  <div class="acciones eliminar">
+                    <span class="accionestext">Eliminar</span>
+                    <i class="fa fa-trash" aria-hidden="true" title=""></i>
+                  </div>
+                  <div class="acciones guardar">
+                    <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+                    <span class="accionestext">Guardar</span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>987688</td>
+              <td>Major Lazer</td>
+              <td>Armario</td>
+              <td>30/05/2018</td>
+              <td>8:00 am</td>
+              <td>
+                <div class="text-center">
+                  <div class="btn btn-sm btn-info">
+                    <i class="fa fa-pencil-square-o " aria-hidden="true" title="Editar"></i>
+                  </div>
+                  <div class="acciones eliminar">
+                    <span class="accionestext">Eliminar</span>
+                    <i class="fa fa-trash" aria-hidden="true" title=""></i>
+                  </div>
+                  <div class="acciones guardar">
+                    <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+                    <span class="accionestext">Guardar</span>
+                  </div>
+                </div>
+
+              </td>
+            </tr>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <h1>Citas Técnico</h1> -->
+
+
+
+  <div id="cliente2" class="tabcontent">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar citas" title="">
+
+    <table id="myTable">
+      <tr class="table-header">
+        <th>Orden de trabajo</th>
+        <th>Nombre Cliente</th>
+        <th>Instalacion</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Acciones</th>
+      </tr>
+      <tr>
+        <td>34532</td>
+        <td>Camila Cabello</td>
+        <td>Armario</td>
+        <td>30/05/2018</td>
+        <td>8:00 am</td>
+        <td>
+          <div class="acciones editar">
+            <span class="accionestext">Editar</span>
+            <i class="fa fa-pencil-square-o " aria-hidden="true" title="Editar"></i>
+          </div>
+          <div class="acciones eliminar">
+            <span class="accionestext">Eliminar</span>
+            <i class="fa fa-trash" aria-hidden="true" title=""></i>
+          </div>
+          <div class="acciones guardar">
+            <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+            <span class="accionestext">Guardar</span>
+          </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td>987688</td>
+        <td>Major Lazer</td>
+        <td>Armario</td>
+        <td>30/05/2018</td>
+        <td>8:00 am</td>
+        <td>
+          <div class="acciones editar">
+            <span class="accionestext">Editar</span>
+            <i class="fa fa-pencil-square-o " aria-hidden="true" title="Editar"></i>
+          </div>
+          <div class="acciones eliminar">
+            <span class="accionestext">Eliminar</span>
+            <i class="fa fa-trash" aria-hidden="true" title=""></i>
+          </div>
+          <div class="acciones guardar">
+            <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+            <span class="accionestext">Guardar</span>
+          </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td>34532</td>
+        <td>Camila Cabello</td>
+        <td>Armario</td>
+        <td>30/05/2018</td>
+        <td>8:00 am</td>
+        <td>
+          <div class="acciones editar">
+            <span class="accionestext">Editar</span>
+            <i class="fa fa-pencil-square-o " aria-hidden="true" title="Editar"></i>
+          </div>
+          <div class="acciones eliminar">
+            <span class="accionestext">Eliminar</span>
+            <i class="fa fa-trash" aria-hidden="true" title=""></i>
+          </div>
+          <div class="acciones guardar">
+            <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+            <span class="accionestext">Guardar</span>
+          </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td>987688</td>
+        <td>Major Lazer</td>
+        <td>Armario</td>
+        <td>30/05/2018</td>
+        <td>8:00 am</td>
+        <td>
+          <div class="acciones editar">
+            <span class="accionestext">Editar</span>
+            <i class="fa fa-pencil-square-o " aria-hidden="true" title="Editar"></i>
+          </div>
+          <div class="acciones eliminar">
+            <span class="accionestext">Eliminar</span>
+            <i class="fa fa-trash" aria-hidden="true" title=""></i>
+          </div>
+          <div class="acciones guardar">
+            <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+            <span class="accionestext">Guardar</span>
+          </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td>34532</td>
+        <td>Camila Cabello</td>
+        <td>Armario</td>
+        <td>30/05/2018</td>
+        <td>8:00 am</td>
+        <td>
+          <div class="acciones editar">
+            <span class="accionestext">Editar</span>
+            <i class="fa fa-pencil-square-o " aria-hidden="true" title="Editar"></i>
+          </div>
+          <div class="acciones eliminar">
+            <span class="accionestext">Eliminar</span>
+            <i class="fa fa-trash" aria-hidden="true" title=""></i>
+          </div>
+          <div class="acciones guardar">
+            <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+            <span class="accionestext">Guardar</span>
+          </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td>987688</td>
+        <td>Major Lazer</td>
+        <td>Armario</td>
+        <td>30/05/2018</td>
+        <td>8:00 am</td>
+        <td>
+          <div class="acciones editar">
+            <span class="accionestext">Editar</span>
+            <i class="fa fa-pencil-square-o " aria-hidden="true" title="Editar"></i>
+          </div>
+          <div class="acciones eliminar">
+            <span class="accionestext">Eliminar</span>
+            <i class="fa fa-trash" aria-hidden="true" title=""></i>
+          </div>
+          <div class="acciones guardar">
+            <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+            <span class="accionestext">Guardar</span>
+          </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td>34532</td>
+        <td>Camila Cabello</td>
+        <td>Armario</td>
+        <td>30/05/2018</td>
+        <td>8:00 am</td>
+        <td>
+          <div class="acciones editar">
+            <span class="accionestext">Editar</span>
+            <i class="fa fa-pencil-square-o " aria-hidden="true" title="Editar"></i>
+          </div>
+          <div class="acciones eliminar">
+            <span class="accionestext">Eliminar</span>
+            <i class="fa fa-trash" aria-hidden="true" title=""></i>
+          </div>
+          <div class="acciones guardar">
+            <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+            <span class="accionestext">Guardar</span>
+          </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td>987688</td>
+        <td>Major Lazer</td>
+        <td>Armario</td>
+        <td>30/05/2018</td>
+        <td>8:00 am</td>
+        <td>
+          <div class="acciones editar">
+            <span class="accionestext">Editar</span>
+            <i class="fa fa-pencil-square-o " aria-hidden="true" title="Editar"></i>
+          </div>
+          <div class="acciones eliminar">
+            <span class="accionestext">Eliminar</span>
+            <i class="fa fa-trash" aria-hidden="true" title=""></i>
+          </div>
+          <div class="acciones guardar">
+            <i class="fa fa-floppy-o" aria-hidden="true" title=""></i>
+            <span class="accionestext">Guardar</span>
+          </div>
+
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+
+  <script src="../../js/main.js"></script>
+
+</body>
+
+</html>

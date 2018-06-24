@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>restablecer contraseña - HomeInstallation </title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="formvalidation/dist/css/formValidation.min.css"> -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+</head>
+<style type="text/css">
+  .error {
+    color: #F81111 !important;
+  }
+  
+  input:validate {
+    color: green;
+  }
+</style>
+
+<body>
+	<div class="container text-center my-5">
+		<img src="img/logoHome.png" class="img-fluid" alt="">
+		<h1 class="h2-responsive">Restablecer contraseña</h1>
+		<p>Introduce tu <strong>correo</strong> para ayudarnos a identificarte.</p>
+	</div>
+<div class="col-12 col-lg-8 col-md-4 mx-auto">
+ <h3 class="h3-responsive mb-5">Hemos enviado un correo electronico a: <strong>admin@homeins.co</strong></h3>
+  <a href="passwrong.html">Atrás</a>
+</div>
+  
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+  <script src="js/main.js"></script>
+  <!--  <script src="formvalidation/dist/js/formValidation.min.js"></script>
+<script src="formvalidation/dist/js/framework/bootstrap.min.js"></script> -->
+  <!-- script formulario login -->
+  <script type="text/javascript" src="js/jquery.validate.js"></script>
+  <script src="js/sweetalert.min.js"></script>
+  <script type="text/javascript">
+    function validarFormulario() {
+      $("#formLogin").validate();
+    }
+    $(document).ready(function() {
+      validarFormulario();
+    });
+
+    function validarContact() {
+      $("#formContact").validate();
+    }
+    $(document).ready(function() {
+      validarContact();
+    });
+  </script>
+</body>
+
+</html>

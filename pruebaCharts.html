@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="dataTable/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" href="dataTable/css/jquery.dataTables.min.css">
+</head>
+
+<body>
+  <div class="container mt-5 pt-5 align-items-center">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="pb-5 z-depth-1 p-3">
+          <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-12">
+        <div class="container z-depth-1 p-3">
+          <table id="example" class="display nowrap  " style="width:100%">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011/04/25</td>
+                <td>$320,800</td>
+              </tr>
+              <tr>
+                <td>Garrett Winters</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>63</td>
+                <td>2011/07/25</td>
+                <td>$170,750</td>
+              </tr>
+              <tr>
+                <td>Ashton Cox</td>
+                <td>Junior Technical Author</td>
+                <td>San Francisco</td>
+                <td>66</td>
+                <td>2009/01/12</td>
+                <td>$86,000</td>
+              </tr>
+              <tr>
+                <td>Cedric Kelly</td>
+                <td>Senior Javascript Developer</td>
+                <td>Edinburgh</td>
+                <td>22</td>
+                <td>2012/03/29</td>
+                <td>$433,060</td>
+              </tr>
+              <tr>
+                <td>Airi Satou</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td>33</td>
+                <td>2008/11/28</td>
+                <td>$162,700</td>
+              </tr>
+              <tr>
+                <td>Brielle Williamson</td>
+                <td>Integration Specialist</td>
+                <td>New York</td>
+                <td>61</td>
+                <td>2012/12/02</td>
+                <td>$372,000</td>
+              </tr>
+
+
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <button class="dt-button buttons-copy buttons-html5 " tabindex="0" aria-controls="example"><span>Copy</span></button> -->
+
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+  <script>
+    window.onload = function() {
+
+      var chart = new CanvasJS.Chart("chartContainer", {
+        exportEnabled: true,
+        animationEnabled: true,
+        title: {
+          text: "Instalaciones en el mes"
+        },
+        legend: {
+          cursor: "pointer",
+          itemclick: explodePie
+        },
+        data: [{
+          type: "pie",
+          showInLegend: true,
+          toolTipContent: "{name}: <strong>{y}%</strong>",
+          indexLabel: "{name} - {y}%",
+          dataPoints: [{
+            y: 26,
+            name: "Instalaciones electricas",
+            exploded: true
+          }, {
+            y: 20,
+            name: "Muebles"
+          }, {
+            y: 5,
+            name: "Cocinas"
+          }, {
+            y: 3,
+            name: "baños"
+          }, {
+            y: 7,
+            name: "Closets"
+          }, {
+            y: 17,
+            name: "Pisos"
+          }, {
+            y: 22,
+            name: "Otras instalaciones"
+          }]
+        }]
+      });
+      chart.render();
+    }
+
+    function explodePie(e) {
+      if (typeof(e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+        e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+      } else {
+        e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+      }
+      e.chart.render();
+
+    }
+  </script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.4/js/mdb.min.js"></script>
+  <!-- <script src="dataTable/js/jquery-3.3.1.js"></script> -->
+  <script src="dataTable/js/jquery.dataTables.min.js"></script>
+  <script src="dataTable/js/dataTables.buttons.min.js"></script>
+  <script src="dataTable/js/buttons.flash.min.js"></script>
+  <script src="dataTable/js/jszip.min.js"></script>
+  <script src="dataTable/js/pdfmake.min.js"></script>
+  <script src="dataTable/js/vfs_fonts.js"></script>
+  <script src="dataTable/js/buttons.html5.min.js"></script>
+  <script src="dataTable/js/buttons.print.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#example').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+          'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+      });
+    });
+  </script>
+
+</body>
+
+</html>

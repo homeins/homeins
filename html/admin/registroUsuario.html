@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Crear Usuario-Home Installation</title>
+  <link rel="icon" type="image/png" href="../../img/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/cuentas.css">
+  <link rel="stylesheet" href="../../css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+</head>
+<style type="text/css">
+  .error {
+    color: #F81111 !important;
+  }
+  
+  input:validate {
+    color: green;
+  }
+</style>
+
+<body>
+  <!-- crear usuario -->
+  <section class="">
+
+    <div class="container py-5">
+      <!-- Formulario -->
+      <div class="text-right">
+        <a class="h1-responsive btn btn-outline-success waves-effect" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Crear Usuario</a>
+      </div>
+      <div class="row justify-content-center py-4 collapse" id="collapseExample">
+        <form class="col-12 col-lg-12 z-depth-1 p-3 rounded bg-white" id="createUser">
+          <div class="form-row">
+            <div class="col-lg-5 mx-auto">
+              <div class="md-form ">
+                <input type="text" class="form-control p-2 required texto" id="nombre" placeholder="Nombres" autocomplete="off">
+                <!-- <label for="nombre" class="font-weight-normal  validate   ">Nombres</label> -->
+              </div>
+            </div>
+            <div class="col-lg-5 mx-auto">
+              <div class="md-form ">
+                <input type="text" class="form-control p-2 required texto" id="apellido" placeholder="Apellidos" autocomplete="off">
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-5 mx-auto">
+              <div class="md-form ">
+                <input type="text" class="form-control p-2 required digits" minlength="10" maxlength="10" id="identify" placeholder="Número de cédula" autocomplete="off">
+              </div>
+            </div>
+            <div class="col-lg-5 mx-auto">
+              <div class="md-form ml-3">
+                <input type="text" class="form-control p-2 required digits" minlength="10" maxlength="10" id="telefono" placeholder="Teléfono" autocomplete="off">
+                <!-- <label for="telefono" class="font-weight-normal">Teléfono</label> -->
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-5 mx-auto">
+              <div class="md-form ">
+                <input type="text" class="form-control p-2 required email" id="email" placeholder="Correo Electrónico" autocomplete="off">
+              </div>
+            </div>
+            <div class="col-lg-5 mx-auto">
+              <div class="md-form">
+                <input type="text" class="form-control p-2 required " id="direccion" placeholder="Dirección" autocomplete="off">
+              </div>
+            </div>
+          </div>
+          <div class="form-row justify-content-center pb-5">
+            <div class="col-lg-4 mx-auto">
+              <div class="md-form ">
+                <input type="text" class="form-control p-2 required" name="contrasena" id="contrasena" placeholder="Contraseña">
+                <!-- <label for="contrasena" class="font-weight-normal ">	</label> -->
+              </div>
+            </div>
+            <div class="col-lg-4 mx-auto">
+              <div class="md-form ">
+                <input type="text" class="form-control p-2 required equalTo" name="confirmPsw" id="confirmPsw" placeholder="Confirma contraseña">
+                <!-- <label for="confirmPsw" class="font-weight-normal"></label > -->
+              </div>
+            </div>
+            <div class="col-lg-3 ">
+              <div class="md-form ">
+                <select class="custom-select">
+                  <option selected disabled>Elige el cargo</option>
+                  <option  value="1">Diseñador</option>
+                  <option value="2">Técnico</option>
+                  <option value="3">Administrador</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group text-center">
+            <input type="submit" id="crear" value="crear" class="btn btn-default mb-2" onclick="pasaDatos()" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <button type="button" class="btn elegant-color mb-2" onclick="consultarDatos();">Buscar</button>
+          </div>
+        </form>
+      </div>
+      <hr>
+    </div>
+    <!-- Tabla -->
+    <div class="mt-5 container">
+      <h1 class="text-center mb-5">Usuarios Registrados</h1>
+
+      <table id="myTable" class=" table table-hover bg-white z-depth-1 rounded ">
+        <thead>
+          <tr class="text-center">
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Cédula</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+            <th>Contraseña</th>
+            <th>Cargo</th>
+            <th>Acciones </th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr>
+            <td id="nameUser" class="font-weight-normal text-right"></td>
+            <td id="lastNameUser" class="font-weight-normal text-right"></td>
+            <td id="identify" class="font-weight-normal text-right"></td>
+            <td id="direccion" class="font-weight-normal text-right"></td>
+            <td id="telefono" class="font-weight-normal text-right"></td>
+            <td id="emailUser" class="font-weight-normal text-right"></td>
+            <td id="contrasena" class="font-weight-normal text-right"></td>
+            <td id="Cargo" class="font-weight-normal text-right"></td>
+            <td id="botones" class="text-right">
+              <button class="editar btn btn-info btn-sm" onclick="editarFila(this)"><i class="fa fa-pencil"></i></button>
+              <!-- <button class="insertar btn btn-primary" onclick="insertarFila(this)"><i class="fa fa-plus"></i></button> -->
+              <!-- <button class="copiar btn btn-warning" onclick="copiarFila(this)"><i class="fa fa-clone"></i></button> -->
+              <button class="eliminar btn btn-danger btn-sm" onclick="borrarFila(this)"><i class="fa fa-trash-o"></i></button>
+            </td>
+          </tr>
+          <!-- <tr>
+            <td id="nameUser"></td>
+            <td id="lastNameUser"></td>
+            <td id="Cédula"></td>
+            <td id="Dirección"></td>
+            <td id="telefono"></td>
+            <td id="emailUser" class="correo"></td>
+            <td id="Contraseña"></td>
+            <td id="Cargo"></td>
+            <td id="botones">
+              <button class="editar btn btn-info m-0" onclick="editarFila(this)"><i class="fa fa-pencil"></i></button>
+              <button class="insertar btn btn-primary" onclick="insertarFila(this)"><i class="fa fa-plus"></i></button> 
+              <button class="copiar btn btn-warning" onclick="copiarFila(this)"><i class="fa fa-clone"></i></button>
+              <button class="eliminar btn btn-danger" onclick="borrarFila(this)"><i class="fa fa-trash-o"></i></button>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+  <!-- crear usuario -->
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+  <!-- <script src="../../js/main.js"></script> -->
+  <script src="../../js/jquery.validate.js"></script>
+  <script src="../../js/sweetalert.min.js"></script>
+  <script src="../../js/createUser.js"></script>
+  <script src="../../js/jquery.validate.js"></script>
+  <script>
+    function validarContact() {
+      $("#createUser").validate({
+        rules: {
+          contrasena: "required",
+          confirmPsw: {
+            equalTo: "#contrasena"
+          }
+        }
+      });
+    }
+    $(document).ready(function() {
+      validarContact();
+    });
+  </script>
+</body>
+
+
+</html>

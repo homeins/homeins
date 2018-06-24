@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Home Installation - Principal </title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="formvalidation/dist/css/formValidation.min.css"> -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+</head>
+<style type="text/css">
+  .error {
+    color: #F81111 !important;
+  }
+  
+  input:validate {
+    color: green;
+  }
+</style>
+
+<body>
+  <!-- ventana loading -->
+  <div id="container-load" class="container-load">
+    <div class="carga">
+    </div>
+    <div class="load">
+      <h1>Cargando...</h1>
+    </div>
+  </div>
+  <!-- ventana loading -->
+  <!-- seccion header -->
+  <header class="header" id="inicio">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+      <a class="navbar-brand" href="#">
+        <img src="img/logoHomeg.png" width="180" height="60" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav text-capitalize font-weight-normal text-center mx-auto">
+          <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#modalLoginForm">Acceso corporativo</a>
+          <a class="nav-item nav-link active" href="#inicio">inicio</a>
+          <a class="nav-item nav-link" href="#instalaciones">Instalaciones</a>
+          <a class="nav-item nav-link" href="#nosotros">quiénes somos</a>
+          <a class="nav-item nav-link" data-toggle="modal" data-target="#contactoForm">contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- contenedor del carousel -->
+    <div class="banner ">
+      <div class="deg">
+        <div class="flex-center text-white text-center">
+          <h1 class="h1-responsive col-8 mx-auto">Servicios profesionales para tu Hogar, confía en nuestras manos expertas.</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- seccion servicios -->
+  <section id="instalaciones" class="py-4 pb-5 mb-5">
+    <div class="container text-center mt-5 pt-5 descripcion-servicios font-weight-normal">
+      <h2 class="h2-responsive font-weight-bold blue-home pb-3">Al servicio de tu hogar</h2>
+      <p>Permítenos conocer tus necesidades, nosotros tenemos los especialistas para atenderte.
+        <br> ¡Comunícate a nuestras líneas de contacto!
+      </p>
+    </div>
+    <!-- tarjetas de servicios -->
+    <div class="container pt-3 pb-5 text-center">
+      <div class="row">
+        <!-- columna -->
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="mt-5 card z-depth-1">
+            <div class="degradado"></div>
+            <img class="img-fluid rounded" src="img/worker.png" alt="">
+            <div class="services-title">
+              <span>Instalaciones electricas</span>
+            </div>
+            <div class="boton-mas pb-3">
+              <!-- modal ver mas -->
+              <a>
+                <button class="btn btn btn-default mt-4" data-toggle="modal" data-target="#exampleModal">Ver más..</button>
+              </a>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- modal ver mas -->
+            </div>
+          </div>
+        </div>
+        <!-- fin columna -->
+        <!-- columna -->
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="mt-5 card z-depth-1">
+            <div class="degradado"></div>
+            <img class="img-fluid rounded" src="img/baño.jpg" alt="">
+            <div class="services-title">
+              <span>Baños</span>
+            </div>
+            <div class="boton-mas pb-3">
+              <!-- modal ver mas -->
+              <a>
+                <button class="btn btn btn-default mt-4" data-toggle="modal" data-target="#exampleModal">Ver más..</button>
+              </a>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- modal ver mas -->
+            </div>
+          </div>
+        </div>
+        <!-- fin columna -->
+        <!-- columna -->
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="mt-5 card ">
+            <div class="degradado"></div>
+            <img class="img-fluid rounded" src="img/especiales.jpeg" alt="">
+            <div class="services-title">
+              <span>Pisos </span>
+            </div>
+            <div class="boton-mas pb-3">
+              <!-- modal ver mas -->
+              <a>
+                <button class="btn btn btn-default mt-4" data-toggle="modal" data-target="#exampleModal">Ver más..</button>
+              </a>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- modal ver mas -->
+            </div>
+          </div>
+        </div>
+        <!-- fin columna -->
+        <!-- columna -->
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="mt-5 card z-depth-1">
+            <div class="degradado"></div>
+            <img class="img-fluid rounded" src="img/muebles.jpeg" alt="">
+            <div class="services-title">
+              <span>Instalaciones electricas</span>
+            </div>
+            <div class="boton-mas pb-3">
+              <!-- modal ver mas -->
+              <a>
+                <button class="btn btn btn-default mt-4" data-toggle="modal" data-target="#exampleModal">Ver más..</button>
+              </a>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- modal ver mas -->
+            </div>
+          </div>
+        </div>
+        <!-- fin columna -->
+        <!-- columna -->
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="mt-5 card z-depth-1">
+            <div class="degradado"></div>
+            <img class="img-fluid rounded" src="img/asistencia.jpg" alt="">
+            <div class="services-title ">
+              <span>Instalaciones electricas</span>
+            </div>
+            <div class="boton-mas pb-3">
+              <!-- modal ver mas -->
+              <a>
+                <button class="btn btn btn-default mt-4" data-toggle="modal" data-target="#exampleModal">Ver más..</button>
+              </a>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- modal ver mas -->
+            </div>
+          </div>
+        </div>
+        <!-- fin columna -->
+        <!-- columna -->
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="mt-5 card z-depth-1">
+            <div class="degradado"></div>
+            <img class="img-fluid rounded" src="img/cocina.jpeg" alt="">
+            <div class="services-title">
+              <span>Instalaciones electricas</span>
+            </div>
+            <div class="boton-mas pb-3">
+              <!-- modal ver mas -->
+              <a>
+                <button class="btn btn btn-default mt-4" data-toggle="modal" data-target="#exampleModal">Ver más..</button>
+              </a>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- modal ver mas -->
+            </div>
+          </div>
+        </div>
+        <!-- fin columna -->
+      </div>
+    </div>
+    <!-- fin tarjetas de servicios -->
+  </section>
+
+
+  <section id="nosotros" class="nosotros py-5">
+    <h1 class="h1-responsive pt-5 text-center font-weight-normal" style="color:#403e3e;">Quiénes Somos</h1>
+    <div class="container pt-5 pb-5">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="mt-5 ">
+            <h2 class="h2-responsive blue-home">El servicio de instalación como Una solución para nuestros clientes</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto eveniet eligendi doloremque aspernatur culpa in quaerat consectetur eius, deleniti magni, quibusdam odio adipisci atque accusamus! Amet quam soluta voluptatibus eligendi
+              tempore animi maiores accusamus impedit, a accusantium, praesentium doloremque numquam.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="">
+            <img src="img/building-joy.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- modales login y contacto -->
+  <section class="bg-deco">
+    <!-- modal log in -->
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content container-form">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Iniciar Sesión</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+          </div>
+          <form id="formLogin" action="" method="post">
+            <div class="md-form mb-5">
+              <input placeholder="Usuario" type="email" name="usuario" id="usuario" class="form-control validate form-input required email maxlength" autocomplete="off" />
+            </div>
+            <div class="md-form mb-4">
+              <input placeholder="Contraseña" type="password" name="psw" id="psw" class=" form-control validate form-input required " />
+              <!-- <label for="password"></label> -->
+            </div>
+            <div class="text-center">
+              <input class="btn btn-default" type="button" id="enviar" value="Ingresar" onclick="logIn()">
+            </div>
+
+
+            <div id="contenedor_errores"></div>
+          </form>
+          <div class="cambio-datos pt-3 text-center">
+            <a href="passwrong.html">
+              <p>¿Olvidaste tu Contraseña?</p>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- modal log in fin -->
+
+    <!-- MODAL CONTACTO -->
+    <div class="modal fade right show" id="contactoForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display:none;">
+      <div class="modal-dialog modal-full-height modal-right" role="document">
+        <div class="modal-dialog cascading-modal" role="document">
+
+          <!--Content-->
+          <div class="modal-content">
+
+            <!--Header-->
+            <div class="modal-header info-color white-text">
+              <h2 class=" h3">
+                <i class="fa fa-pencil "></i> Contáctanos</h2>
+
+              <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+              <form id="formContact" action="" method="POST">
+                <!-- Default input name -->
+                <div class="md-form">
+                  <input placeholder="Nombres y Apellido" type="text" maxlength="70" name="contactName" id="contactName" class="form-control  validate form-input required texto">
+                </div>
+                <!-- Default input email -->
+                <div class="md-form">
+                  <input placeholder="Tu Email" type="email" name="contactMail" id="contactMail" class="form-control validate form-input required email" autocomplete="off">
+                </div>
+
+                <!-- Default input subject -->
+                <div class="md-form">
+                  <input placeholder="Tu Teléfono" type="text" minlength="7" maxlength="10" name="contactPhone" id="contactPhone" class="form-control validate form-input required digits">
+                </div>
+                <!-- Default input subject -->
+                <div class="md-form">
+                  <input placeholder="Asunto" type="text" name="contactSubject" id="contactSubject" class="form-control validate form-input required">
+                </div>
+                <!-- Default textarea message -->
+                <div class="md-form">
+                  <textarea placeholder="Mensaje" type="text" name="contactMesage" id="contactMesage" class="md-textarea form-control validate form-input required"></textarea>
+                </div>
+                <div class="text-center mt-4">
+                  <input class="btn btn-info" type="submit" id="enviar" value="Enviar" onclick="contactUs()">
+                </div>
+                <div id="contenedor_errores"></div>
+
+              </form>
+            </div>
+          </div>
+          <!--/.Content-->
+        </div>
+        <!--/Modal: Contact form-->
+      </div>
+    </div>
+    <!-- FIN MODAL CONTACTO -->
+
+
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="">
+            <img src="img/logoHomeblan.png" class="img-fluid" alt="">
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6 col-sm-12">
+          <div class="pt-5">
+            <p class="h6-responsive p-0 m-0">
+              <strong>Telefonos:</strong> Atención al cliente: 12343456</p>
+            <p class="h6-responsive p-0 m-0">
+              <strong>Dirección:</strong> calle falsa 123 Bogotá Cundinamarca</p>
+            <p class="h6-responsive p-0 m-0">&copy; 2018 Home Installation Colombia &copy; Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- script para loader inicial -->
+  <script>
+    window.onload = function() {
+      var contenedor = document.getElementById('container-load');
+      contenedor.style.visibility = 'hidden';
+      contenedor.style.opacity = '0';
+      contenedor.delay = '5000';
+    }
+  </script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+  <script src="js/main.js"></script>
+  <!--  <script src="formvalidation/dist/js/formValidation.min.js"></script>
+<script src="formvalidation/dist/js/framework/bootstrap.min.js"></script> -->
+  <!-- script formulario login -->
+  <script type="text/javascript" src="js/jquery.validate.js"></script>
+  <script src="js/sweetalert.min.js"></script>
+  <script src="js/smooth.js"></script>
+  <script type="text/javascript">
+    function validarFormulario() {
+      $("#formLogin").validate();
+    }
+    $(document).ready(function() {
+      validarFormulario();
+    });
+
+    function validarContact() {
+      $("#formContact").validate();
+    }
+    $(document).ready(function() {
+      validarContact();
+    });
+  </script>
+</body>
+
+</html>
