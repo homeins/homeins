@@ -64,9 +64,9 @@ function logIn() {
       icon: "success",
     });
 
-  } else if (usuario == 'admin@homeins.co' && password != "12345"  ) {
+  } else if (usuario == 'admin@homeins.co' && password != "12345") {
     swal("Datos Incorrectos", "Tu usuario y/o contraseña son incorrectos");
-    
+
   } else if (usuario == 'disenador@homeins.co' && password == "123456") {
     console.log("perfil diseñador");
     window.location = 'html/diseñador/diseñador.html';
@@ -75,12 +75,12 @@ function logIn() {
       text: "Bienvenido! " + usuario,
       icon: "success",
     });
-  }else if (usuario == 'disenador@homeins.co' && password != "123456") {
+  } else if (usuario == 'disenador@homeins.co' && password != "123456") {
     console.log("perfil diseñador");
-   
+
     swal("Datos Incorrectos dis", "Tu usuario y/o contraseña son incorrectos");
-    
-  }  else  if (usuario == 'tecnico@homeins.co' && password == "1234567") {
+
+  } else if (usuario == 'tecnico@homeins.co' && password == "1234567") {
     console.log("perfil tecnico");
     window.location = 'html/tecnico/tecnico.html';
     swal({
@@ -90,9 +90,9 @@ function logIn() {
     });
   } else if (usuario == 'tecnico@homeins.co' && password != "1234567") {
     console.log("perfil diseñador");
-   
+
     swal("Datos Incorrectos tec", "Tu usuario y/o contraseña son incorrectos");
-    
+
   } else {
     swal("Campos Obligatorios", "Por favor ingresa los datos");
   }
@@ -120,9 +120,23 @@ function forgotPsw() {
     });
   } else if (usuario == '') {
     swal("Campos Obligatorios", "Por favor ingresa el correo");
-  }else if (usuario != 'admin@homeins.co'|| usuario != 'disenador@homeins.co' || usuario != 'tecnico@homeins.co') {
+  } else if (usuario != 'admin@homeins.co' || usuario != 'disenador@homeins.co' || usuario != 'tecnico@homeins.co') {
     swal("Este correo no existe", "Por favor ingresa un usuario válido");
   }
 
 }
 
+function confirmPsw() {
+  let contrasena = document.getElementById('contrasena').value;
+  let confirmContra = document.getElementById('confirmPsw').value;
+  if (contrasena.value == confirmContra.value) {
+    window.location = 'index.html'
+    swal({
+      title: "Contraseña Cambiada",
+      text: "Puedes iniciar sesión nuevamente!",
+      icon: "success",
+    });
+  }
+  swal("Error", "Las contraseñas no coinciden");
+
+}
